@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+
+<?php
+ 
+require 'define.php';
+ 
+ $toa = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
+
+ ?>
+
+ <body>
+ <table class="table table-striped">
+  
+
+
+<?php  
+{ ?>
+
+<tr> 
+<td>
+</td>
+<td>
+   </td></tr>
+ </tr>
+
+<?php
+}
+?>
+
+
+<input type="text" name = "twitname" id ="twitname" />
+
+<input type="button" name = "button1" id ="twitbutton" value="Show Image" />
+
+<div id="result">
+
+
+</div>
+
+
+<script>
+
+$(document).ready(function(){
+	
+
+    $("#twitbutton").click(function(){
+    	var a = $("#twitname").val();
+
+    	$("#result").empty();
+    	
+		 $("#result").append("<img src ='https://www.twitter.com/"+a+"/profile_image?size=original' />");
+    });
+});
+</script>
+
+
+</body>
+</html>
